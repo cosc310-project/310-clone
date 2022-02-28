@@ -6,10 +6,16 @@
       http-equiv="Content-Security-Policy"
       content="script-src 'self' 'unsafe-inline'"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Chatbot app</title>
+    <title>Hello Electron Vue!</title>
   </head>
   <body>
     <div id="root"></div>
   </body>
+  <script>
+    window.electron.ipcRenderer.once('ipc-example', (arg) => {
+      console.log(arg);
+    });
+
+    window.electron.ipcRenderer.myPing();
+  </script>
 </html>
