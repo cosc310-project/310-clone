@@ -21,7 +21,7 @@ export class ChatService extends Service {
       (event: any, message: any) => {
         this.receiveMessageDelay(
           message.answer ??
-            "Sorry, I don't understand your question.  Can you please rephrase it?"
+            "Sorry I don't understand you, could you repeat that?"
         );
       }
     );
